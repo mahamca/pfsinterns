@@ -80,7 +80,7 @@ axios.post('http://127.0.0.1:4001/product/all/',dataset)
      
 </div>
 
-      {/* <button onClick={()=>naviagate('/addproduct/')}>Add Products</button> */}
+       <button onClick={()=>naviagate('/addproduct/')}>Add Products</button> 
       <br /><br />
       
       
