@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 const AddProduct = () => {
     const [base64String, setBase64String] = useState('')
@@ -7,7 +8,7 @@ const AddProduct = () => {
     const [pname,setName] =useState('')
    const [price,setPrice] =useState('')
   
-    
+    const navigate=useNavigate()
 
     const handleImageChange = event => {
 
@@ -37,7 +38,7 @@ const AddProduct = () => {
     }
     axios.post("http://127.0.0.1:4001/product/upload",dataset)
     .then(response => {
-        console.log("saved");
+        navigate('/home/')
         
     })
     .catch(error => {})
